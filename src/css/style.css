@@ -1,0 +1,119 @@
+.FieldTrackNumber {
+    width: 100%;
+}
+.FieldTrackNumber .MuiFilledInput-root{
+    background: #EEF0F6;
+    border-radius: 16px;
+}
+
+.FieldTrackNumber .MuiFilledInput-root:after, .FieldTrackNumber .MuiFilledInput-root:before {
+     display: none
+ }
+
+.DeliveryStatus {
+    background: rgba(253, 150, 30, 0.2);
+    border-radius: 20px;
+    color: #FD961E;
+    line-height: 19px;
+}
+
+.historyList > .item > .status {
+    border: 1px solid #E5E9F3;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    top: 0;
+    transition: 0.4s;
+    background: white;
+}
+
+.historyList > .item > .status > span {
+    background: #4AB6BD;
+    width: 6px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.historyList > .item > .status.ready > span {
+    opacity: 1;
+}
+
+.historyList > .item > .status.ready {
+    border-color: #284492;
+    border-width: 1.5px;
+}
+
+.historyList > .item > .status.current {
+    border-color: #284492;
+    transform: scale(1.2);
+}
+
+.historyList > .item > .status.current > span {
+    background: #FF5C5C;
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+}
+
+.historyList > .item {
+    position: relative;
+}
+
+.historyList > .item:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 145%;
+    border-left: 1px dashed #e5e9f3;
+    left: 11.6px;
+    transition: 0.4s;
+}
+
+.historyList > .item:last-child:before {
+    display: none;
+}
+
+.historyList > .item.ready:before {
+    border-color: #284492;
+}
+
+.loader--element {
+    height: 13px;
+    width: 309.1px;
+    margin: 20px auto;
+    border-radius: 8px;
+    animation: animatedBackground 250s linear infinite;
+    -webkit-animation: animatedBackground 250s linear infinite;
+    -moz-animation: animatedBackground 250s linear infinite;
+    -o-animation: animatedBackground 250s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-webkit-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: 10000px 0;
+    }
+}
